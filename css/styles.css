@@ -229,6 +229,10 @@ footer{
         text-align: center;
     }
 
+    .icons{
+        margin-top: 30px;
+    }
+
     .mobile{
         display: none;
     }
@@ -241,5 +245,5 @@ footer{
         margin-left: 20px;  
     }
 
-    
+
 }
