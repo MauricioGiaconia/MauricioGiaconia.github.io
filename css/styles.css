@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'roboto';
+    src: url('#{resource["css:fonts/Roboto-Regular.ttf"]}');
+    src: url('#{resource["css:fonts/Roboto-Regular.ttf"]}') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+ 
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: "roboto", Arial, Helvetica, sans-serif;
+    color: black;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+nav{
+    color: #fff;
+    background-color: #000;
+}
+
+header{
+    background-color: rgb(32, 32, 32);
+    text-align: center;
+    padding: 50px;
+    color: #fff;
+    min-height:150px;
+}
+
+ul{
+    list-style: none;   
+    padding-top: 10px; 
+}
+
+li{
+    display: inline-block;
+    padding: 10px;
+}
+
+h3{
+    padding: 3px;
+    margin-top: 10px;
+}
+
+span{
+    display: inline-block;
+    padding: 3px;
+}
+
+.last-one{
+    margin-bottom: 10px;
+}
+
+.card{
+    margin-top: 30px;
+}
+
+/* Estilos en la imagen de perfil*/
+
+#container-profile{
+    margin-top: -3%;
+    text-align: center;
+}
+
+#border-profile{
+    border-radius: 100%;
+    border: #202020 solid 1px;
+    width: 270px;
+    height: 250px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    background-color: #fff;
+}
+
+#icon-title{
+    margin-top: 10px;
+    height: 50px;
+}
+
+
+#profile-pic{
+    border-radius: 100%;
+    width: 245px;
+    height: 227px;
+    margin: 0 auto;
+}
+
+i{
+    padding: 5px;
+    margin-top: 15px;
+}
+
+i:hover{
+    color:rgb(1, 55, 92);
+}
+
+.selected{
+    color:rgb(1, 55, 92);
+}
+
+.description{
+    font-size: 20px;
+}
+
+
+/* Estilo skills */
+
+#skills span{
+    width: 120px;
+}
+
+.empty-skill{
+    width: 200px;
+    height: 15px;
+    background-color: rgb(126, 125, 125);
+    display: inline-block;
+    border-radius: 20px;
+    margin-left: 20px;
+}
+
+.level-skill{
+  
+    height: 16.8px;
+    background-color: rgb(1, 55, 92);
+    display: inline-block;
+    border-radius: 20px;
+    padding: 6px;   
+ 
+}
+
+.w100{
+    width: 100%;
+}
+
+.w85{
+    width: 85%;
+}
+
+.w75{
+    width: 75%;
+}
+
+.w65{
+    width: 65%;
+}
+
+.w50{
+    width: 50%;
+}
+
+.w35{
+    width: 35%;
+}
+
+
+
+/*Estilo footer*/
+
+footer{
+    width: 100%;
+    background-color: #000;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    min-height:50px;
+}
+
+
+
+
+@media (max-width: 1000px) {
+
+    #container-profile {
+        margin: 0 auto;
+        margin-top: -6%;
+        width: 270px;     
+    }
+
+    #icon-title{
+        height: 90px;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    footer{
+        margin-top: 30px;
+    }
+}
+
+@media (min-width: 1000px){
+
+    .container{
+        max-width: 1900px;
+        padding: 0;
+        margin-left: 0;
+    }
+
+    #container-profile{
+        height: 400px;
+    }
+
+    .desktop-profile{
+        width: 450px;
+        float: left;
+        background-color: rgb(32, 32, 32);
+        height: 100%;
+        color: #fff;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+    }
+
+    .card{
+        margin-left: 20px;  
+    }
+
+    
+}
