@@ -161,11 +161,7 @@ window.onload = function(){
     var path = window.location.pathname;
     var page = path.split("/").pop();
 
-    console.log(page);
-    
     page = page.split("-");
-    
-
     
     if (page[1] == "en.html"){
 
