@@ -59,7 +59,7 @@ function toggleLanguage(){
         deployWaitingDiv("Translating!");   
 
         setTimeout(function(){
-            
+
             window.location.replace(page.replace(".html", "") + "-en.html");
         }, 1000);
 
@@ -160,6 +160,9 @@ window.onload = function(){
     
     var path = window.location.pathname;
     var page = path.split("/").pop();
+
+    console.log(page);
+    
     page = page.split("-");
     
 
