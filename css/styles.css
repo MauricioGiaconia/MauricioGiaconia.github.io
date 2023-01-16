@@ -10,20 +10,23 @@
 *{
     padding: 0;
     margin: 0;
- 
+   
 }
 
 html{
     height: 100%;
+ 
+    
 }
 
 body{
     font-family: "roboto", Arial, Helvetica, sans-serif;
     color: black;
-    margin: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
+    margin-bottom: 100px;
+ 
 }
 
 nav{
@@ -47,6 +50,11 @@ ul{
 li{
     display: inline-block;
     padding: 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
 }
 
 h3{
@@ -119,12 +127,12 @@ i{
 /* Estilo skills */
 
 #skills span{
-    width: 120px;
+    width: 20%;
 }
 
 .empty-skill{
-    width: 200px;
-    height: 15px;
+    width: 50%;
+    height: 17px;
     background-color: rgb(126, 125, 125);
     display: inline-block;
     border-radius: 20px;
@@ -165,24 +173,156 @@ i{
     width: 35%;
 }
 
+.custom-grid-container{
 
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto auto auto auto auto auto auto auto 50px;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.grid-form{
+    grid-column: 1/3;
+    grid-row: 1/4;
+}
 
 /*Estilo footer*/
 
 footer{
+   
     width: 100%;
     background-color: #000;
-    height: 20px;
+    height: 50px;
     color: #fff;
-    text-align: center;
+    text-align: center; 
+    grid-column: 1/3;
+    grid-row: 9;
     padding: 10px;
-    min-height:50px;
+ 
+}
+
+.toggle-lang{
+    float: right;
+}
+
+.toggle-lang img{
+    width: 50px;
+    padding: 10px;
+}
+
+.toggle-button{
+    border: 0;
+    border-radius: 20px;
+}
+
+.button-indicator{
+    height: 15px;
+    width: 35px;
+    border-radius: 20px;
+    background-color: rgb(6, 97, 6);
+    display: flow-root;
+   
+}
+
+#ball, #ball-en{
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+    background-color: #757575;
+    margin-top: -2px;
+
+}
+
+.card{
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 10px;
 }
 
 
 
+.card .last-one{
+    margin-bottom: 70px !important;
+}
+
+.enball{
+    float: right;
+}
+
+.form-container{
+    width: 85%;
+    margin: 20px auto !important;
+    text-align: center;
+ 
+}
+
+label{
+    width: 65px;
+}
+
+label, input{
+    margin-top: 20px;
+}
+
+.textarea-container{
+    width: 255px;
+    margin: 0 auto;
+}
+
+.textarea-container label{
+    float: left;
+}
+
+
+textarea{
+    resize: none;
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    border: 1px solid;
+}
+
+#char-counter{
+    color: grey;
+    float: left;
+}
+
+.forbidden{
+  
+    border: 2px solid rgb(228, 9, 9);
+    position: relative;
+    animation: shake .1s linear;
+    animation-iteration-count: 3;
+      
+}
+
+.send-btn{
+    display: block;
+    margin: 0 auto;
+    float: left;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    width: 100px;
+    height: 50px;
+}
+
+@keyframes shake {
+    0% { left: -5px; }
+    100% { right: -5px; }
+}
 
 @media (max-width: 1000px) {
+
+    .desktop-profile{
+
+        grid-column: 1/3;
+    }
+
+    .card{
+        grid-column: 1/3;
+    }
 
     #container-profile {
         margin: 0 auto;
@@ -200,37 +340,53 @@ footer{
 
     .desktop{
         display: none;
-    }
+    } 
 
     footer{
-        margin-top: 30px;
+        margin-top: 15px;
+        grid-row: 10;
     }
 }
 
 @media (min-width: 1000px){
 
-    .container{
-        max-width: 1900px;
-        padding: 0;
-        margin-left: 0;
-    }
-
     #container-profile{
         height: 400px;
     }
 
+    h2{
+        font-size: 1.25rem;
+    }
+
     .desktop-profile{
-        width: 450px;
-        float: left;
         background-color: rgb(32, 32, 32);
         height: 100%;
         color: #fff;
-        margin: 0 auto;
         text-align: center;
+        grid-row: 1/10;
+        grid-column: 1;
+    }
+
+    #border-profile{
+       
+        width: 90%;
+        height: 80%;
+       
+    }
+ 
+    #profile-pic{
+  
+        width: 96%;
+        height: 98%;
+
+    }
+
+    .information-container{
+        margin-top: 35%;
     }
 
     .icons{
-        margin-top: 30px;
+        margin-top: 20%;
     }
 
     .mobile{
@@ -245,5 +401,114 @@ footer{
         margin-left: 20px;  
     }
 
+    footer{
+        margin-top: 15px;
+    }
 
+
+}
+
+@media (min-width: 1500px){
+
+    h2{
+        font-size: 2rem;
+    }
+
+    #border-profile{
+       
+        width: 70%;
+        height: 80%;
+       
+    }
+
+    .icons{
+        margin-top: 5%;
+    }
+
+    .information-container{
+        margin-top: 20%;
+    }
+}
+
+@media (min-width: 3000px){
+
+    body{
+        font-size: 60px;
+    }
+
+
+
+    h2, h3{
+        font-size: 65px;
+    }
+
+    #container-profile{
+        height: 800px;
+        margin-bottom: 400px;
+    }
+
+    #border-profile{
+       
+        width: 600px;
+        height: 550px;
+    
+    }
+
+    
+    #profile-pic{
+        width: 560px;
+        height: 520px;
+  
+    }
+
+    #icon-title{
+        margin-top:50px;
+        height: 150px;
+    }
+
+    .description{
+        font-size: 50px;
+    }
+
+    .desktop-profile{
+        width: 850px;
+        padding: 40px;
+    }
+
+    .icons{
+        margin-top: 100px;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .desktop{
+        display: block;
+    }
+
+    .card{
+        margin-left: 20px;  
+    }
+
+    footer{
+        height: 100px;
+    }
+
+    .card .last-one{
+        margin-bottom: 200px !important;
+    }
+
+    #skills span{
+        width: 800px !important;
+    }
+
+    .empty-skill{
+        width: 3000px;
+        height: 50px;
+    }
+
+    .level-skill{
+        height: 60px;
+    }
 }

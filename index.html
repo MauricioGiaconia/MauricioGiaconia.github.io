@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-    <link rel="stylesheet" href="css/bootstrap.min.css">        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/all.min.css">
     <title>Curriculum Vitae</title>
 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
     <script src="js/scripts.js"></script>
 
+
 </head>
+
 <body>
 
-    <nav class="row">
-        <ul><li>Curriculum</li>
-            <li>Contacto</li>
-            <li>Proyectos</li>
+    <nav>
+        <ul>
+            <li><a id="aElement-cv" href="index.html">Curriculum</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="proyects.html">Proyectos</a></li>
+
+            <li class="toggle-lang"><img src="img/Spanish-Icon.PNG" alt="spanish-lang">
+                <button onclick="toggleLanguage()" class="toggle-button">
+                    <div class="button-indicator"><div id="ball" value="spanish"></div></div>
+                </button><img src="img/English-Icon.png" alt="english-lang">
+            </li>
         </ul>
+
+
     </nav>
 
-    <header class="col">
+
+    <header>
         <h1>Curriculum Vitae</h1>
     </header>
 
-    
-    
 
-    <div class="container">
+    <div class="custom-grid-container">
 
         <div class="col desktop-profile">
             <div id="container-profile" class="col">
@@ -41,50 +55,58 @@
                     Mauricio Javier Giaconía<br>
                     <i class="description">Backend developer</i>
                 </h2>
-                
+
                 <div class="icons">
-                    <i onmouseover="iconReaction('Mauricio Javier Giaconía <br> <i class=description>Backend developer</i>', this)" class="fa-sharp fa-2x fa-solid fa-user selected"></i>
-                    <i onmouseover="iconReaction('Olavarría, Buenos Aires, Argentina', this)" class="fa-solid fa-2x fa-map-location waiting"></i>
-                    <i onmouseover="iconReaction('maurigiaconia@hotmail.com / mauriciogiaco@gmail.com', this)" class="fa-sharp fa-2x fa-solid fa-envelope waiting"></i>
-                    <i onmouseover="iconReaction('(+54)2284-588151', this)" class="fa-sharp fa-2x fa-solid fa-phone waiting"></i>
+                    <i onmouseover="iconReaction('Mauricio Javier Giaconía <br> <i class=description>Backend developer</i>', this)"
+                        class="fa-sharp fa-2x fa-solid fa-user selected"></i>
+                    <i onmouseover="iconReaction('Olavarría, Buenos Aires, Argentina', this)"
+                        class="fa-solid fa-2x fa-map-location waiting"></i>
+                    <i onmouseover="iconReaction('maurigiaconia@hotmail.com / mauriciogiaco@gmail.com', this)"
+                        class="fa-sharp fa-2x fa-solid fa-envelope waiting"></i>
+                    <i onmouseover="iconReaction('(+54)2284-588151', this)"
+                        class="fa-sharp fa-2x fa-solid fa-phone waiting"></i>
 
                 </div>
-                
-            </div>
 
-            <div class="row justify-content-center desktop">
+            </div>
+            
+
+            <div class="information-container desktop">
 
                 <div id="about">
-                    <h3>Personal</h3>
-    
+                    <h3><strong>Personal</strong></h3>
+
                     <span><strong>Nombre completo: </strong>Mauricio Javier Giaconía.</span><br>
-                    <span><strong>Dirección: </strong>9 de julio 1756 (Departamento 6), Olavarría, Buenos Aires.</span><br>
+                    <span><strong>Dirección: </strong>9 de julio 1756 (Departamento 6), Olavarría, Buenos
+                        Aires.</span><br>
                     <span><strong>Número de teléfono: </strong> (+54)2284-588151</span> <br>
-                    <span class="last-one"><strong>Email: </strong> maurigiaconia@hotmail.com / mauriciogiaco@gmail.com</span> <br><br>
-          
+                    <span class="last-one"><strong>Email: </strong> maurigiaconia@hotmail.com /
+                        mauriciogiaco@gmail.com</span> <br><br>
+
                 </div>
-    
+
+                <div id="languages">
+                    <h3><strong>Idiomas</strong></h3>
+                    <span>Español: Nativo.</span><br>
+                    <span class="last-one">Inglés: Medio.</span><br>
+                </div>
+
             </div>
 
-            <div class="row justify-content-center desktop">
-                <div id="languages">
-                    <h3>Idiomas</h3>
-                    <span>Español: Nativo.</span><br>
-                    <span class="last-one">Inglés: Medio.</span><br>    
-                </div>
-            </div>
+           
         </div>
 
 
         <div class="row justify-content-center card">
 
             <div id="profile">
-                <h3>Perfil</h3>
+                <h3><strong>Perfil</strong></h3>
 
                 <span class="last-one">Programador con 1 año de experiencia en desarrollo web y backend. <br>
                     Apasionado por la programacion y en el aprendizaje constante de nuevas tecnologías. <br>
-                    Busco una plaza donde desarrollar mis actividades de manera concreta y eficiente, teniendo como finalidad el trabajo en equipo y el aprendizaje permanente para poder mejorar mi desempeño diario.
-                </span>        
+                    Busco una plaza donde desarrollar mis actividades de manera concreta y eficiente, teniendo como
+                    finalidad el trabajo en equipo y el aprendizaje permanente para poder mejorar mi desempeño diario.
+                </span>
             </div>
 
         </div>
@@ -92,41 +114,53 @@
         <div class="row justify-content-center card mobile">
 
             <div id="about">
-                <h3>Personal</h3>
+                <h3><strong>Personal</strong></h3>
 
                 <span><strong>Nombre completo: </strong>Mauricio Javier Giaconía.</span><br>
                 <span><strong>Dirección: </strong>9 de julio 1756, Olavarría, Buenos Aires.</span><br>
                 <span><strong>Número de teléfono: </strong> (+54)2284-588151</span> <br>
-                <span class="last-one"><strong>Email: </strong> maurigiaconia@hotmail.com / mauriciogiaco@gmail.com</span> <br><br>
-      
+                <span class="last-one"><strong>Email: </strong> maurigiaconia@hotmail.com /
+                    mauriciogiaco@gmail.com</span>
+                <br><br>
+
             </div>
 
         </div>
 
         <div class="row justify-content-center card mobile">
             <div id="languages">
-                <h3>Idiomas</h3>
+                <h3><strong>Idiomas</strong></h3>
                 <span>Español: Nativo.</span><br>
-                <span class="last-one">Inglés: Medio.</span><br>    
+                <span class="last-one">Inglés: Medio.</span><br>
             </div>
         </div>
 
         <div class="row justify-content-center card">
             <div id="studies">
-                <h3>Estudios</h3>
-                <span><strong>Bachiller con orientación en tecnología </strong><i>Escuela de educación técnica Nº2 "Luciano Fortabat".</i></span><br>
-                <span><strong>Técnico superior en análisis de sistemas </strong><i>Instituto superior en formación técnica Nº 130 (ISFT 130).</i></span><br>
-                <span>Carrera de analista de sistemas, 3 años de duración. Primer y segundo año completo, tercero incompleto</span><br>
-                <span><strong>Técnico Universitario en Desarrollo de Aplicaciones Informáticas (TUDAI) </strong><i>Facultad de ciencias exactas (En curso).</i></span><br>
-                <span class="last-one"><strong>Bootcamps / Cursos desarrollador full stack: </strong><i>Argentina Programa 4.0 - SoyHenry. (En curso)</i></span><br>      
+                <h3><strong>Estudios</strong></h3>
+                <span><strong>Bachiller con orientación en tecnología </strong><i>Escuela de educación técnica Nº2
+                        "Luciano
+                        Fortabat".</i></span><br>
+                <span><strong>Técnico superior en análisis de sistemas </strong><i>Instituto superior en formación
+                        técnica
+                        Nº 130 (ISFT 130).</i></span><br>
+                <span>Carrera de analista de sistemas, 3 años de duración. Primer y segundo año completo, tercero
+                    incompleto</span><br>
+                <span><strong>Técnico Universitario en Desarrollo de Aplicaciones Informáticas (TUDAI)
+                    </strong><i>Facultad
+                        de ciencias exactas (En curso).</i></span><br>
+                <span class="last-one"><strong>Bootcamps / Cursos desarrollador full stack: </strong><i>Argentina
+                        Programa
+                        4.0 - SoyHenry. (En curso)</i></span><br>
             </div>
         </div>
 
         <div class="row justify-content-center card">
             <div id="experience">
-                <h3>Experiencia laboral</h3>
+                <h3><strong>Experiencia laboral</strong></h3>
                 <span><strong>Desarrollador web con PHP </strong><i>2020-2021 SC3 Sistemas.</i><br>
-                    Desarrollar nuevas funcionalidades a pedido de los clientes, solucionar bugs del sistema y manipular datos utilizando MySQL.<br>
+                    Desarrollar nuevas funcionalidades a pedido de los clientes, solucionar bugs del sistema y manipular
+                    datos utilizando MySQL.<br>
                     Tecnologías utilizadas: HTML, CSS, PHP, MySQL, JavaScript, Bootstrap.
                 </span><br>
 
@@ -134,42 +168,73 @@
                     Trabajo por cuenta propia brindando un servicio de mensajería a distintos comercios en mi ciudad.
                 </span><br>
 
-                
+
             </div>
         </div>
 
         <div class="row justify-content-center card">
             <div id="skills">
-                <h3>Habilidades</h3>
-                <span><strong>JavaScript </strong></span> <div class="empty-skill"><div class="level-skill w85"></div></div><br>
-                <span><strong>PHP </strong></span><div class="empty-skill"><div class="level-skill w85"></div></div><br>
-                <span><strong>Java </strong></span> <div class="empty-skill"><div class="level-skill w75"></div></div><br>
-                <span><strong>C# </strong></span><div class="empty-skill"><div class="level-skill w75"></div></div><br>
-                <span><strong>MySQL </strong></span><div class="empty-skill"><div class="level-skill w65"></div></div><br>
-                <span><strong>HTML </strong></span><div class="empty-skill"><div class="level-skill w100"></div></div><br>
-                <span><strong>CSS </strong></span><div class="empty-skill"><div class="level-skill w75"></div></div><br>
-                <span class="last-one"><strong>Unity </strong></span><div class="empty-skill"><div class="level-skill w35"></div></div><br>
+                <h3><strong>Habilidades</strong></h3>
+                <span><strong>JavaScript </strong></span>
+                <div class="empty-skill">
+                    <div class="level-skill w85"></div>
+                </div><br>
+                <span><strong>PHP </strong></span>
+                <div class="empty-skill">
+                    <div class="level-skill w85"></div>
+                </div><br>
+                <span><strong>Java </strong></span>
+                <div class="empty-skill">
+                    <div class="level-skill w75"></div>
+                </div><br>
+                <span><strong>C# </strong></span>
+                <div class="empty-skill">
+                    <div class="level-skill w75"></div>
+                </div><br>
+                <span><strong>MySQL </strong></span>
+                <div class="empty-skill">
+                    <div class="level-skill w65"></div>
+                </div><br>
+                <span><strong>HTML </strong></span>
+                <div class="empty-skill">
+                    <div class="level-skill w100"></div>
+                </div><br>
+                <span><strong>CSS </strong></span>
+                <div class="empty-skill">
+                    <div class="level-skill w75"></div>
+                </div><br>
+                <span><strong>Unity </strong></span>
+                <div class="empty-skill">
+                    <div class="level-skill w35"></div>
+                </div><br>
             </div>
         </div>
 
         <div class="row justify-content-center card">
             <div id="projects">
-                <h3>Proyectos</h3>
-                <span class="last-one" target="_blank"><strong>GitHub: </strong><a href="https://github.com/MauricioGiaconia?tab=repositories" >"https://github.com/MauricioGiaconia</a></span><br>          
+                <h3><strong>Proyectos</strong></h3>
+                <span class="last-one" target="_blank"><strong>GitHub: </strong>
+                    <a href="https: //github.com/MauricioGiaconia?tab=repositories"><i class="fa-brands fa-2x fa-github"></i></a>
+                </span><br>
             </div>
         </div>
 
         <div class="row justify-content-center card last-one">
             <div id="redes">
-                <h3>Linkedin</h3>
-                <span class="last-one" target="_blank"><strong>Linkedin: </strong><a href="https://www.linkedin.com/in/mauricio-giaconia-934a75162/" >"https://www.linkedin.com/in/mauricio-giaconia-934a75162/</a></span><br>          
+                <h3><strong>Linkedin</strong></h3>
+                <span class="last-one" target="_blank"><strong>Linkedin: </strong><a
+                        href="https://www.linkedin.com/in/mauricio-giaconia-934a75162/"><i class="fa-brands fa-2x fa-linkedin"></i></a></span><br>
             </div>
         </div>
+        <div></div>
 
+        <footer class="footer">
+            <p>Desarrollado por Mauricio Javier Giaconía</p>
+        </footer>
+        
     </div>
 
-    <footer class="footer">
-        <p>Desarrollado por Mauricio Javier Giaconía</p>
-    </footer>
+ 
 </body>
+
 </html>
