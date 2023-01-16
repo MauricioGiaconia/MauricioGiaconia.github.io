@@ -52,6 +52,11 @@ function toggleLanguage(){
         deployWaitingDiv("Translating!");   
 
         setTimeout(function(){
+
+            if (page == "" || page == null || page == undefined){
+                page = "index.html";
+            }
+
             window.location.replace(page.replace(".html", "") + "-en.html");
         }, 1000);
 
