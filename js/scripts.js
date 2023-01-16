@@ -45,18 +45,21 @@ function toggleLanguage(){
     var path = window.location.pathname;
     var page = path.split("/").pop();
 
+   
+
+
     //ball.style.cssFloat = 'right';
     if (ball.style.cssFloat == "left" || !ball.style.cssFloat){
+
+        if (page == "" || page == "-en" || page == null || page == undefined){
+            page = "index.html";
+        }
 
         changeBallDirection("right", "english");
         deployWaitingDiv("Translating!");   
 
         setTimeout(function(){
-
-            if (page == "" || page == null || page == undefined){
-                page = "index.html";
-            }
-
+            
             window.location.replace(page.replace(".html", "") + "-en.html");
         }, 1000);
 
