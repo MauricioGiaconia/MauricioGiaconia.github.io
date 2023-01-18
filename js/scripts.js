@@ -155,6 +155,46 @@ function countChar(str, textAreaEl){
     
 }
 
+function sendEmail(){
+    let emailCc = document.getElementById("emailCc").value;
+    let subject = document.getElementById("subjectEmail").value;
+    let text = document.getElementById("textAreaMsg").value;
+
+    if (emailCc != "" && subject != "" && text != ""){
+        console.log(emailCc);
+        if (validateEmail(emailCc)){
+
+            let link = "mailto:maurigiaconia@hotmail.com;mauriciogiaco@gmail.com"
+            + "?cc=" + emailCc
+            + "&subject=" + encodeURIComponent(subject)
+            + "&body=" + encodeURIComponent(text);
+
+            window.location.href = link;
+
+        } else{
+            alert("Ingrese un email valido!");
+        }
+    } else{
+
+        if (emailCc == ""){
+            alert("Ingrese un email!");
+        } else if (subject == ""){
+            alert("Ingrese un asunto al mail!");
+        } else{
+            alert("Ingrese el mensaje que contendrá el mail!");
+        }
+    }
+   
+
+   
+
+}
+
+function validateEmail(email) {
+    let re = /\S+@\S+\.\S+/;
+    return re.test(email);
+  }
+
 
 window.onload = function(){
     
