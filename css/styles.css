@@ -22,16 +22,19 @@ html{
 body{
     font-family: "roboto", Arial, Helvetica, sans-serif;
     color: black;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     height: 100%;
     margin-bottom: 100px;
- 
+    grid-template-columns: 100%;
+    grid-template-rows: 120px 150px auto;
 }
+ 
+
 
 nav{
     color: #fff;
     background-color: #000;
+    grid-column: 1;
 }
 
 header{
@@ -40,6 +43,7 @@ header{
     padding: 50px;
     color: #fff;
     min-height:150px;
+    grid-column: 1;
 }
 
 ul{
@@ -177,6 +181,7 @@ i{
 
     display: grid;
     grid-template-columns: 25% 75%;
+    grid-column: 1;
     height: 100%;
     width: 100%;
 
