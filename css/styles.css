@@ -199,9 +199,12 @@ footer{
     text-align: center; 
     grid-column: 1/3;
     grid-row: 9;
-    padding: 5px;
     align-self: end;
  
+}
+
+.pFooter{
+    margin-top: 20px;
 }
 
 .toggle-lang{
@@ -274,6 +277,7 @@ label, input{
 
 .textarea-container label{
     float: left;
+    width: 75px;
 }
 
 
@@ -302,7 +306,6 @@ textarea{
 .send-btn{
     display: block;
     margin: 0 auto;
-    float: left;
     margin-top: 40px;
     margin-bottom: 15px;
     width: 100px;
@@ -357,7 +360,7 @@ textarea{
     .custom-grid-container{
 
     
-        grid-template-rows: auto auto auto auto auto auto auto auto 50px;
+        grid-template-rows: auto auto auto auto auto auto auto auto 70px;
      
         
     }
@@ -413,11 +416,6 @@ textarea{
     .card{
         margin-left: 20px;  
     }
-
-    footer{
-        margin-top: 15px;
-    }
-
 
 }
 

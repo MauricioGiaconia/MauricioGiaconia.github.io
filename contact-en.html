@@ -47,9 +47,9 @@
         <div class="grid-form card form-container">
             <form action="" class="form" method="POST">
                 <label for="email">Email: </label>
-                <input name="email" type="email"><br>
+                <input name="email" type="email" id="emailCc"><br>
                 <label for="subject">Subject: </label>
-                <input name="subject" type="text"><br>
+                <input name="subject" type="text" id="subjectEmail"><br>
 
                 <div class="textarea-container">
                     <label for="message">Message: </label><br>
@@ -58,14 +58,14 @@
                     <span id="char-counter">0/500</span>
                 </div><br>
 
-                <button class="send-btn">Send</button>
+                <input type="button" class="send-btn" onclick="sendEmail()" Value="Send">
             </form>
             
         </div>
 
        
         <footer class="footer">
-            <p>Developed by Mauricio Javier Giaconía</p>
+            <p class="pFooter">Developed by Mauricio Javier Giaconía</p>
         </footer>
     </div>
 
