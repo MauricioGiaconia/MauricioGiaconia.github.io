@@ -7,6 +7,10 @@
 
 }
 
+:root {
+    --hex-proyects-height: 500px;
+  }
+
 *{
     padding: 0;
     margin: 0;
@@ -234,9 +238,8 @@ i{
     
 }
 
-.grid-form{
+.grid-maxWidth{
     grid-column: 1/3;
-    grid-row: 1/4;
 }
 
 /*Estilo footer*/
@@ -365,6 +368,18 @@ textarea{
     
 }
 
+.proyects{
+    text-align: center;
+    height: var(--hex-proyects-height);
+}
+
+.proyects h2{
+    display: inline-block;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: calc(var(--hex-proyects-height) * 0.5);
+}
+
 @keyframes shake {
     0% { left: -5px; }
     100% { right: -5px; }
@@ -398,7 +413,11 @@ textarea{
 
     .desktop{
         display: none;
-    } 
+    }
+    
+    footer{
+        grid-row: 10;
+    }
 
 }
 
