@@ -421,7 +421,7 @@ textarea{
 
 }
 
-@media (min-width: 1000px){
+@media (min-width: 1001px){
 
 
     .custom-grid-container{
@@ -516,9 +516,35 @@ textarea{
 
     body{
         font-size: 60px;
+        grid-template-rows: 200px 250px auto;
     }
 
+    h1{
+        font-size: 7.5rem;
+    }
 
+    ul .desktop{
+        width: 1200px;
+        padding: 20px;
+    }
+
+    ul .desktop li{
+        margin-right: 40px;
+    }
+
+    .toggle-lang img{
+        width: 130px;
+    }
+
+    .button-indicator, .toggle-button{
+        height: 50px;
+        width: 100px;
+    }
+
+    #ball{
+        width: 50px;
+        height: 60px;
+    }
 
     h2, h3{
         font-size: 65px;
@@ -574,7 +600,7 @@ textarea{
     }
 
     footer{
-        height: 100px;
+        min-height: 100px;
     }
 
     .card .last-one{
