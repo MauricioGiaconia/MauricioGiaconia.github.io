@@ -490,12 +490,37 @@ textarea{
 
 }
 
-@media (min-width: 1500px){
+@media (min-width: 2100px){
 
     body{
-        font-size: 20px;
+        font-size: 22px;
         grid-template-rows: 200px 250px auto;
     }
+
+    ul .desktop{
+        width: 1200px;
+        padding: 20px;
+    }
+
+    ul .desktop li{
+        margin-right: 20px;
+        font-size: 30px;
+    }
+
+    .toggle-lang img{
+        width: 90px;
+    }
+
+    .button-indicator, .toggle-button{
+        height: 30px;
+        width: 70px;
+    }
+
+    #ball{
+        width: 30px;
+        height: 40px;
+    }
+
 
 
     h2{
@@ -549,6 +574,7 @@ textarea{
 
     ul .desktop li{
         margin-right: 40px;
+        font-size: 70px;
     }
 
     .toggle-lang img{
