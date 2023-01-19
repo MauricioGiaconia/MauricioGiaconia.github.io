@@ -22,9 +22,24 @@
 
     <nav>
         <ul>
-            <li><a id="aElement-cv" href="index-en.html">Curriculum</a></li>
-            <li><a href="contact-en.html">Contact me!</a></li>
-            <li><a href="proyects-en.html">Proyects</a></li>
+            <div class="desktop">
+                <li><a id="aElement-cv" href="index-en.html">Curriculum</a></li>
+                <li><a href="contact-en.html">Contact me!</a></li>
+                <li><a href="proyects-en.html">Proyects</a></li>
+            </div>
+
+            
+            <div class="burguer mobile">            
+                <a href="javascript:void(0);" class="icon" onclick="displayMenu()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+
+            <div id="links" class="mobile">
+                <li><a id="aElement-cv" href="index-en.html">Curriculum</a></li>
+                <li><a href="contact-en.html">Contact me!</a></li>
+                <li><a href="proyects-en.html">Proyects</a></li>
+            </div>
 
             <li class="toggle-lang"><img src="img/Spanish-Icon.PNG" alt="spanish-lang">
                 <button onclick="toggleLanguage()" class="toggle-button">

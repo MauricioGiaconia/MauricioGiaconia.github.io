@@ -217,6 +217,15 @@ function isEnglishLanguage(){
     return false;
 }
 
+function displayMenu(){
+    let links = document.getElementById("links");
+    if (links.style.display === "block") {
+        links.style.display = "none";
+    } else {
+        links.style.display = "block";
+    }
+}
+
 
 window.onload = function(){
     
