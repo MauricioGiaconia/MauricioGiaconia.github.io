@@ -492,6 +492,12 @@ textarea{
 
 @media (min-width: 1500px){
 
+    body{
+        font-size: 20px;
+        grid-template-rows: 200px 250px auto;
+    }
+
+
     h2{
         font-size: 2rem;
     }
@@ -510,13 +516,26 @@ textarea{
     .information-container{
         margin-top: 20%;
     }
+
+    .icons i{
+        margin-right: 40px;
+    }
+
+    .empty-skill{
+ 
+        height: 20px;
+    }
+
+    .level-skill{
+        height: 25px;
+    }
 }
 
-@media (min-width: 3000px){
+@media (min-width: 4000px){
 
     body{
         font-size: 60px;
-        grid-template-rows: 200px 250px auto;
+
     }
 
     h1{
@@ -546,6 +565,10 @@ textarea{
         height: 60px;
     }
 
+    .information-container{
+        margin-top: 40%;
+    }
+
     h2, h3{
         font-size: 65px;
     }
@@ -557,15 +580,15 @@ textarea{
 
     #border-profile{
        
-        width: 600px;
-        height: 550px;
+        width: 1300px;
+        height: 943px;
     
     }
 
     
     #profile-pic{
-        width: 560px;
-        height: 520px;
+        width: 1250px;
+        height: 920px;
   
     }
 
