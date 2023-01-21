@@ -191,10 +191,6 @@ function sendEmail(){
             isEnglishLanguage() ? alert("Enter the message that the email will contain!") : alert("Ingrese el mensaje que contendrá el mail!");
         }
     }
-   
-
-   
-
 }
 
 function validateEmail(email) {
@@ -226,6 +222,17 @@ function displayMenu(){
     }
 }
 
+/* Aun no funciona
+function downloadPdf(english = false){
+
+    let url = "/pdf/es/CV-MauricioJavierGiaconia.pdf";
+
+    var hiddenElement = document.createElement('a');
+    hiddenElement.href = 'data:' + encodeURI(url);
+    hiddenElement.target = '_blank';
+    hiddenElement.download = 'CV-MauricioJavierGiaconia.pdf';
+    hiddenElement.click();
+} */
 
 window.onload = function(){
     

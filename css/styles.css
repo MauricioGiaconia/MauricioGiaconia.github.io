@@ -67,7 +67,7 @@ nav{
 
 #links{
     display: none;
-    width: 120px;
+    width: 130px;
     position: absolute;
     background-color: black;
     margin-top: 45px;
@@ -96,7 +96,7 @@ ul{
 }
 
 ul .desktop{
-    width: 400px;
+    width: 500px;
     margin-top: 15px;
     position: absolute;
 }
@@ -568,7 +568,7 @@ textarea{
     }
 
     ul .desktop{
-        width: 1200px;
+        width: 1900px;
         padding: 20px;
     }
 
